@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         agent: process.env.SSH_AUTH_SOCK,
         showProgress: true,
         srcBasePath: 'public/',
-        createDirectories: false
+        createDirectories: true
       },
 
       main: {

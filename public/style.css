@@ -1,8 +1,97 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
 body {
-  background: #222;
+  min-height: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5px 30px;
+}
+
+.title {
+  flex: 1 auto;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.words {
+  flex: 1 auto;
+  padding-left: 15px;
+}
+
+@media (max-width: 800px) {
+  /* Collapse down to one col */
+  .row {
+    display: block;
+    padding: 5px 10px;
+  }
+}
+
+
+
+/* COLORS n' SHIT */
+
+body {
   color: #fff;
+  background: url(synth.jpg);
+  background-size: cover;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Lobster, cursive;
+  font-size: 48px;
+}
+
+h2 small {
+  font-size: 16px;
+}
+
+.rainbow {
+  color: #BE4B79;
+  transition: color .3s linear;
 }
 
 a {
-  color: #aaf;
+  color: #FCA265;
+  text-decoration: none;
+}
+
+.row {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+footer {
+  text-align: right;
+}
+
+
+@media (max-width: 800px) {
+  body {
+    background: url(synth_mobile.jpg);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 72px;
+  }
+
+  h1 br {
+    display: none;
+  }
 }

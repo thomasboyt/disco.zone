@@ -28,46 +28,20 @@
 // Colorize site name
 
 window.onload = function() {
+  var rainbow = document.querySelector('.rainbow');
+
   var colors = [
-    '#f00',  // R
-    '#fa0',  // O
-    '#ff0',  // Y
-    '#4f4',  // G
-    '#55f',  // B
-    '#73b',  // I
-    '#e8e'   // V
+    '#BE4B79',
+    '#EEBE43'
   ];
 
-  function renderColors() {
-    var old = document.querySelector('.rainbow');
-
-    var new_ = document.createElement('span');
-    new_.className = 'rainbow';
-
-    for (var i = 0; i < old.innerText.length; i++) {
-      var charSpan = document.createElement('span');
-      charSpan.innerText = old.innerText[i];
-
-      if ((i+1) % 2 === 0) {
-        // odd number is a space, don't add a color
-      } else {
-        var colorIdx = (i/2) % colors.length;
-        charSpan.style.color = colors[colorIdx];
-      }
-
-      new_.appendChild(charSpan);
-    }
-
-    old.parentNode.replaceChild(new_, old);
+  function cycleColors() {
+    var first = colors.shift();
+    colors.push(first);
+    rainbow.style.color = colors[0];
   }
 
-  setTimeout(function() {
-    setInterval(function() {
-      var first = colors.shift();
-      colors.push(first);
-      renderColors();
-    }, 300);
-  }, 500);
+  rainbow.addEventListener('transitionend', cycleColors, true);
 
-  renderColors();
+  setTimeout(cycleColors, 0);
 };

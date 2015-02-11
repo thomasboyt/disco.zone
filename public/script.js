@@ -28,6 +28,17 @@
 // Colorize site name
 
 window.onload = function() {
+
+  var bgColors = [
+    '190,75,121',
+    '252,162,101',
+    '238,190,67'
+  ];
+
+  var color = bgColors[Math.floor(Math.random() * 3)];
+  var container = document.querySelector('.container');
+  container.style.background = 'rgba(' + color + ', .4)';
+
   var rainbow = document.querySelector('.rainbow');
 
   var colors = [

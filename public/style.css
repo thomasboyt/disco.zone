@@ -3,11 +3,11 @@ html, body {
   margin: 0;
 }
 
-html {
+html, body {
   height: 100%;
 }
 
-body {
+.container {
   min-height: 100%;
   display: flex;
   flex-flow: row;

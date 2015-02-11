@@ -69,7 +69,12 @@ h2 small {
 
 a {
   color: #FCA265;
+  transition: color .3s ease;
   text-decoration: none;
+}
+
+a:hover {
+  color: #FFCF54;
 }
 
 .row {

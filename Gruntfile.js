@@ -17,12 +17,15 @@ module.exports = function(grunt) {
 
       main: {
         files: {
-          './': ['public/**']
+          './': ['public/**', '!public/images/**']
         }
-      }
+      },
+
+      images: {
+        files: {
+          './': ['public/images/**']
+        }
+      },
     }
   });
-
-  grunt.registerTask('deploy', ['sftp']);
-
 };

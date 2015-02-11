@@ -47,7 +47,7 @@ body {
 
 body {
   color: #fff;
-  background: url(synth.jpg);
+  background: url(/images/synth.jpg);
   background-size: cover;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
@@ -88,7 +88,7 @@ footer {
 
 @media (max-width: 800px) {
   body {
-    background: url(synth_mobile.jpg);
+    background: url(/images/synth_mobile.jpg);
   }
 
   h1 {
